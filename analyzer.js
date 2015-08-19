@@ -5,6 +5,9 @@ function analyzePacket(argPacket, argNonce, argCallback) {
   var packet = {};
   var basekey = 'fhsd6f86f67rt8fw78fw789we78r9789wer6re';
   var nonce = 'nonce';
+  if (process.argv[3]) {
+    nonce = argv[3];
+  }
   if (argNonce) {
     nonce = argNonce;
   }
