@@ -18,7 +18,6 @@ function analyzePacket(argPacket, argNonce, argCallback) {
   packet.messageId = argPacket.readUIntBE(0, 2);
   packet.payloadLength = argPacket.readUIntBE(2, 3);
   if (argPacket.slice(7).length === packet.payloadLength) {
-    console.log('payload length is ok');
     fs.readFile(__dirname+'/messages/'+packet.messageId+'.json', function (err, data) {
       if (err) {
         return argCallback('file read '+err, packet);
