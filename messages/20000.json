@@ -1,0 +1,8 @@
+{
+  "id": 20000,
+  "name" : "Encryption",
+  "fields" : [
+    {"name" : "serverRandom", "type" : "STRING"},
+    {"name" : "value 1", "type" : "INT"}
+  ]
+}
